@@ -14,5 +14,5 @@ services:
         networks:
             - stevendev
 networks:
-    zingdev:
+    stevendev:
         driver: bridge
