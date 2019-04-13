@@ -3,7 +3,6 @@ version: "3"
 services:
     traefik:
         image: traefik:latest
-        restart: always
         command: --api --docker
         ports:
             - "80:80"
