@@ -1,17 +1,17 @@
 version: "3"
 
 services:
-    traefik:
-        image: traefik:latest
-        restart: always
-        command: --api.insecure=true --providers.docker
-        ports:
-            - "80:80"
-            - "8234:8080"
-        volumes:
-            - /var/run/docker.sock:/var/run/docker.sock
-        networks:
-            - dev
+  traefik:
+    image: traefik:latest
+    restart: always
+    command: --api.insecure=true --providers.docker
+    ports:
+      - "${WEBPORT}:80"
+      - "${APIPORT}:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - dev
 networks:
-    dev:
-        driver: bridge
+  dev:
+    driver: bridge
