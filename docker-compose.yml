@@ -7,7 +7,7 @@ services:
     command: --api.insecure=true --providers.docker
     ports:
       - "${WEBPORT}:80"
-      - "${APIPORT}:8080"
+      - "${TRAEFIKAPIPORT}:8080"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
