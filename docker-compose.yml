@@ -12,6 +12,3 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - dev
-networks:
-  dev:
-    driver: bridge
