@@ -11,4 +11,8 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
-      - dev
+      - global-docker_dev
+
+networks:
+  global-docker_dev:
+    external: true
