@@ -11,8 +11,8 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
-      - global-docker_dev
+      - dev
 
 networks:
-  global-docker_dev:
-    external: true
+  dev:
+    driver: bridge
