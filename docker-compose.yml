@@ -3,7 +3,7 @@ version: "3"
 services:
   traefik:
     image: traefik:latest
-    restart: always
+    restart: ${RESTARTOPT}
     command: --api.insecure=true --providers.docker
     ports:
       - "${WEBPORT}:80"
